@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int escolha;
+    int pista = 0;
+
+    printf("=== DETECTIVE QUEST ===\n");
+    printf("Voce eh um detetive investigando um roubo na biblioteca.\n\n");
+
+    printf("Primeira pista: alguem deixou um bilhete misterioso.\n");
+    printf("1 - Ler o bilhete\n");
+    printf("2 - Ignorar e procurar outra pista\n");
+    printf("Escolha: ");
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        printf("\nO bilhete diz: 'O culpado adora chaves'...\n");
+        pista = 1;
+    } else {
+        printf("\nVoce perdeu tempo e nao encontrou nada util.\n");
+    }
+
+    printf("\nAgora voce encontra tres suspeitos:\n");
+    printf("1 - O Bibliotecario\n");
+    printf("2 - O Zelador\n");
+    printf("3 - O Pianista\n");
+    printf("Escolha: ");
+    scanf("%d", &escolha);
+
+    if (escolha == 3 && pista == 1) {
+        printf("\nBoa! O bilhete falava de 'chaves', e o pianista usa teclas!\n");
+        printf("Voce resolveu o misterio!\n");
+    } else {
+        printf("\nVoce acusou a pessoa errada... o caso continua sem solucao.\n");
+    }
+
+    printf("\n=== FIM DO JOGO ===\n");
+
+    return 0;
+}
